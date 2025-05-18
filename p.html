@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Save the Ocean</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .main {
+      width: 85%;
+      text-align: center;
+      margin: auto;
+    }
+
+    .header {
+      height: 200px;
+      background-image: url("./plastics_drowning_ocean.jpeg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding-top: 40px;
+    }
+
+    .header h2 {
+      color: white;
+      font-size: 32px;
+    }
+
+    .header p {
+      color: lightblue;
+      font-size: 18px;
+    }
+
+    .petition {
+      margin-top: 20px;
+    }
+
+    .petition h3 {
+      color: orange;
+      font-size: 20px;
+    }
+
+    .petition input[type="text"] {
+      width: 200px;
+      padding: 8px;
+      margin-top: 10px;
+    }
+
+    .petition button {
+      padding: 10px;
+      margin-top: 10px;
+      background-color: lightblue;
+      border-radius: 5px;
+      border: 1px solid gray;
+    }
+
+    .petition-counter h3 {
+      font-size: 18px;
+      margin-top: 30px;
+    }
+
+    .petition-counter #displayCount {
+      font-size: 30px;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main">
+    <div class="header">
+      <h2>Save the Ocean</h2>
+      <p>Less Ocean Trash, More Marine Life</p>
+    </div>
+
+    <div class="petition">
+      <h3>Save the Ocean, Sign our Petition</h3>
+      <form>
+        <label for="name">Enter your Name</label><br>
+        <input type="text" id="name"><br>
+        <button type="button" onclick="countPetitions()">Sign</button>
+      </form>
+    </div>
+
+    <div class="petition-counter">
+      <h3>Number of people who Signed this Petition</h3>
+      <h2 id="displayCount">0</h2>
+    </div>
+  </div>
+
+  <script>
+    var counter = 0;
+    var name = "";
+
+    function countPetitions() {
+      name = document.getElementById("name").value;
+      alert("Thank You for Signing " + name);
+      counter = counter + 1;
+      document.getElementById("displayCount").innerText = counter;
+    }
+  </script>
+
+</body>
+</html>
